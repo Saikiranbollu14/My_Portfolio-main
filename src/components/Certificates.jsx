@@ -1,6 +1,6 @@
 import React from "react";
 import FSD from "../assets/React.png";
-import Internship from "../assets/javaScript.png";
+import Internship from "../assets/javascript.png";
 import Apprecitation from "../assets/rfchhCerificate.png";
 
 function Certificates() {
