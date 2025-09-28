@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from '../assets/saikiranlogo.webp';
+import logo from "../assets/saikiranlogo.webp";
 
 const Header = () => {
   const sectionIDs = {
-    "Home": "home",
+    Home: "home",
     "About Me": "about",
-    "Education": "education",
-    "Skills": "skills",
-    "Projects": "projects",
-    "Experience": "experience",
-    "Certificates": "certificates", 
-    "Contact": "contact",
+    Education: "education",
+    Skills: "skills",
+    Projects: "projects",
+    Experience: "experience",
+    Certificates: "certificates",
+    Contact: "contact",
   };
 
   const [activeSection, setActiveSection] = useState("home");
@@ -21,13 +21,12 @@ const Header = () => {
   const handleSetActive = (section) => {
     setActiveSection(section);
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(false); 
+    setMenuOpen(false);
   };
 
   return (
     <header className="bg-gray-800 text-white py-4 sticky top-0 z-50 shadow-lg">
       <nav className="container mx-auto flex justify-between items-center px-4 lg:px-0">
-    
         <div className="flex items-center gap-4">
           <img
             src={logo}
@@ -36,7 +35,6 @@ const Header = () => {
           />
         </div>
 
-  
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="lg:hidden text-white focus:outline-none"
@@ -44,7 +42,6 @@ const Header = () => {
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-     
         <ul
           className={`
             flex flex-col lg:flex-row gap-6 items-center fixed lg:static inset-0 
@@ -59,7 +56,8 @@ const Header = () => {
                 <button
                   onClick={() => handleSetActive(section)}
                   className={`capitalize hover:text-yellow-500 py-2 px-4 rounded-lg transition 
-                    ${activeSection === section
+                    ${
+                      activeSection === section
                         ? "underline underline-offset-4 text-yellow-500 font-semibold"
                         : ""
                     }`}

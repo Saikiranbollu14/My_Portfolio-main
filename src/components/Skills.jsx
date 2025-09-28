@@ -13,11 +13,12 @@ import {
   SiPostman,
   SiSwagger,
   SiRedux,
+  SiTypescript,
+  SiDotnet,
+  SiPostgresql,
 } from "react-icons/si";
 import { SiMui } from "react-icons/si";
-import { VscCode } from "react-icons/vsc";
-import { DiEclipse } from "react-icons/di";
-import { FiTool } from "react-icons/fi";
+import { VscCode, VscSymbolMethod } from "react-icons/vsc"; // fallback for C#
 
 const Skills = () => {
   const categories = [
@@ -33,13 +34,28 @@ const Skills = () => {
           name: "JavaScript",
           icon: <FaJs className="text-yellow-500 text-3xl" />,
         },
-        
+        {
+          name: "TypeScript",
+          icon: <SiTypescript className="text-blue-500 text-3xl" />,
+        },
+        {
+          name: "C#",
+          icon: <VscSymbolMethod className="text-green-600 text-3xl" />,
+        }, // safe icon
       ],
     },
     {
       title: "Frameworks & Technologies",
       skills: [
+        {
+          name: ".NET",
+          icon: <SiDotnet className="text-purple-600 text-3xl" />,
+        },
         { name: "React", icon: <FaReact className="text-blue-500 text-3xl" /> },
+        {
+          name: "Redux",
+          icon: <SiRedux className="text-purple-500 text-3xl" />,
+        },
         {
           name: "Bootstrap",
           icon: <SiBootstrap className="text-purple-600 text-3xl" />,
@@ -52,20 +68,21 @@ const Skills = () => {
           name: "Material-UI",
           icon: <SiMui className="text-blue-400 text-3xl" />,
         },
-        {
-          name: "Redux",
-          icon: <SiRedux className="text-purple-500 text-3xl" />,
-        },
       ],
     },
-    
     {
       title: "Databases",
       skills: [
-        { name: "SQLite", icon: <SiSqlite className="text-blue-600 text-3xl" /> },
+        {
+          name: "PostgreSQL",
+          icon: <SiPostgresql className="text-blue-700 text-3xl" />,
+        },
+        {
+          name: "SQLite",
+          icon: <SiSqlite className="text-blue-600 text-3xl" />,
+        },
       ],
     },
-    
     {
       title: "Developer Tools",
       skills: [
@@ -77,14 +94,14 @@ const Skills = () => {
           name: "Postman",
           icon: <SiPostman className="text-orange-500 text-3xl" />,
         },
+        {
+          name: "Swagger",
+          icon: <SiSwagger className="text-green-600 text-3xl" />,
+        },
         { name: "Git", icon: <FaGit className="text-orange-500 text-3xl" /> },
         {
           name: "GitHub",
           icon: <FaGithub className="text-gray-800 text-3xl" />,
-        },
-        {
-          name: "Swagger",
-          icon: <SiSwagger className="text-gray-800 text-3xl" />,
         },
       ],
     },
@@ -95,7 +112,6 @@ const Skills = () => {
       id="skills"
       className="relative py-12 bg-gray-900 border-gray-600 shadow-lg"
     >
-     
       <div className="absolute top-0 left-0 w-full h-1 bg-yellow-400"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,7 +136,7 @@ const Skills = () => {
                         {skill.name}
                       </h3>
                     </div>
-               
+
                     <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-28 bg-gray-900 text-white text-xs text-center rounded p-1 opacity-0 group-hover:opacity-100 transition">
                       {skill.name}
                     </div>
