@@ -10,7 +10,38 @@ function Projects() {
           Latest Projects
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      
+          {/* Project 1: ENIGMA_AI */}
+          <div className="bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden p-6 transform hover:scale-105 transition-transform">
+            <h3 className="text-lg md:text-xl font-bold mb-2">
+              ENIGMA_AI – Smart Automation Framework
+            </h3>
+            <p className="text-sm md:text-base text-gray-600 mb-2">
+              Prolifics | April 2025 – Present
+            </p>
+            <p className="text-sm md:text-base text-gray-700 mb-2">
+              A smart automation framework that leverages AI to convert
+              requirement documents into test cases, map them to web elements,
+              and auto-generate test scripts for execution.
+            </p>
+            <ul className="list-disc pl-5 text-gray-700 space-y-1 text-sm md:text-base">
+              <li>Involved in the end-to-end life cycle of the project.</li>
+              <li>Helped teammates understand stakeholder requirements.</li>
+              <li>
+                Applied Locator Strategies in crawling and scraping processes.
+              </li>
+              <li>
+                Developed clean, reusable solutions to reduce redundant logic
+                changes.
+              </li>
+              <li>
+                Collaborated with cross-functional teams to integrate Selenium
+                framework structure for test script generation.
+              </li>
+              <li>Deployed services and solutions on IIS.</li>
+            </ul>
+          </div>
+
+          {/* Project 2: Gruhapandit Tuition Platform */}
           <div className="bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform">
             <img
               src={tuition}
@@ -34,7 +65,7 @@ function Projects() {
             </div>
           </div>
 
-       
+          {/* Project 3: Nxt Trendz */}
           <div className="bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform">
             <img
               src={NXTTrend}
@@ -43,11 +74,12 @@ function Projects() {
             />
             <div className="p-6">
               <h3 className="text-lg md:text-xl font-bold mb-2">
-              Nxt Trendz ( ECommerce Clone - Amazon, Flipkart)
+                Nxt Trendz (E-Commerce Clone – Amazon, Flipkart)
               </h3>
               <p className="text-sm md:text-base text-gray-600 mb-4">
-              Implemented Nxt Trendz application which is a clone for ECommerce applications like Amazon, Flipkart where 
-              users can login and can see list of products with search, filters, sort by, etc.
+                Implemented Nxt Trendz application, a clone of Amazon/Flipkart
+                where users can log in, browse products, and use features like
+                search, filters, and sorting.
               </p>
               <a
                 href="https://sainxttrendzapp.ccbp.tech/login"
@@ -58,19 +90,17 @@ function Projects() {
             </div>
           </div>
 
-      
+          {/* Project 4: Jobby App */}
           <div className="bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform">
             <img
               src={Jobbyapp}
-              alt="Jobby App "
+              alt="Jobby App"
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-lg md:text-xl font-bold mb-2">
-              Jobby App 
-              </h3>
+              <h3 className="text-lg md:text-xl font-bold mb-2">Jobby App</h3>
               <p className="text-sm md:text-base text-gray-600 mb-4">
-              Constructed an all-in-one job searching platform, Jobby App. 
+                Constructed an all-in-one job searching platform, Jobby App.
               </p>
               <a
                 href="https://bollukiran.ccbp.tech/login"
@@ -87,4 +117,3 @@ function Projects() {
 }
 
 export default Projects;
-
